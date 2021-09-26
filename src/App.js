@@ -18,7 +18,9 @@ function App({ name }) {
         <button onClick={dec}>Decrement</button>
         <button onClick={reset}>Reset</button>
       </div>
-      <CounterContext.Provider value={{ count: 20 }}>
+      <CounterContext.Provider
+        value={{ count: count, increment: inc, decrement: dec, reset: reset }}
+      >
         <Test />
       </CounterContext.Provider>
     </>
