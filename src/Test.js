@@ -11,8 +11,8 @@ export default function Test() {
           return (
             <>
               <div className="App">
-                <hr />
                 <h2>Welcome to Test Component</h2>
+                <hr />
                 <p>Count: {context.count}</p>
                 <button onClick={context.increment}>Test Inc</button>
                 <button onClick={context.decrement}>Test Dec</button>
