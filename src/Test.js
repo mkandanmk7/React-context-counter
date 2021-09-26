@@ -1,10 +1,20 @@
-import React from "react";
+import { CounterContext } from "./Context";
 
-export const Test = ({ name, count }) => {
+export default function Test() {
   return (
-    <div>
-      <h2>Welcome To {name} component</h2>
-      <p>Count:{count}</p>
-    </div>
+    <>
+      <CounterContext.Consumer>
+        {(context) => {
+          console.log(context);
+
+          return (
+            <div>
+              <p>Hello</p>
+              <p>Count: {context.count}</p>
+            </div>
+          );
+        }}
+      </CounterContext.Consumer>
+    </>
   );
-};
+}
